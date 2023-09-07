@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AimX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="vcscrosshair-cont">
+        <canvas id="vcscanvas-crosshair-mini"></canvas>
+
+        <div class="wrapper"><label for="strokeWidth">Width</label>
+            <input type="range" id="strokeWidth" name="strokeWidth" min="1" max="10" value="5">
+        </div>
+
+        <div class="wrapper"><label for="crosshairLength">Length</label>
+            <input type="range" id="crosshairLength" name="crosshairLength" min="1" max="50" value="25">
+        </div>
+
+        <div class="wrapper"><label for="gap">Gap</label>
+            <input type="range" id="gapLength" name="gapLength" min="0" max="50" value="15">
+        </div>
+
+        <div class="wrapper"><label for="outlineLength">Outline</label>
+            <input type="range" id="outlineLength" name="outlineLength" min="0" max="10" value="5">
+        </div>
+
+        <div class="wrapper"><label for="rotate">Rotate</label>
+            <input type="range" id="rotate" name="rotate" min="0" max="45" value="0">
+        </div>
+
+        <div class="wrapper"><label for="dotradius">Dot Radius</label>
+            <input type="range" id="dotradius" name="dotradius" min="0" max="10" value="2">
+        </div>
+
+        <div class="wrapper"><label for="fillcolorhex">Fill Color</label>
+            <input type="color" id="fillcolorhex" name="fillcolorhex" value="#ff0000">
+        </div>
+
+        <div class="wrapper"><label for="outlinecolorhex">Outline Color</label>
+            <input type="color" id="outlinecolorhex" name="outlinecolorhex" value="#000000">
+        </div>
+
+        <div class="wrapper"><button id="downloadaspng" onclick="DownloadCanvasAsImage()">Download Crosshair</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
