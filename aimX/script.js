@@ -111,5 +111,9 @@ function DownloadCanvasAsImage(){
 	downloadLink.click();
 }
 
-
-//https://stackoverflow.com/questions/13475016/how-to-update-html5-range-on-change-of-a-text-input
+dark.addEventListener('click', function onClick(event) {
+  document.querySelector("#vcscanvas-crosshair-mini").style.backgroundColor = '#212121';
+});
+light.addEventListener('click', function onClick(event) {
+  document.querySelector("#vcscanvas-crosshair-mini").style.backgroundColor = '#f3f3f3';
+});
