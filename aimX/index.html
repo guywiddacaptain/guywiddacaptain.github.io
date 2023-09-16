@@ -10,43 +10,36 @@
 
 <body>
     <div id="vcscrosshair-cont">
-        <canvas id="vcscanvas-crosshair-mini"></canvas>
+  <canvas id="vcscanvas-crosshair-mini"></canvas>
 
-        <div class="wrapper"><label for="strokeWidth">Width</label>
-            <input type="range" id="strokeWidth" name="strokeWidth" min="1" max="10" value="5">
-        </div>
+  <div class="wrapper"><label for="strokeWidth">Width</label>
+    <input type="range" id="strokeWidth" name="strokeWidth" min="1" max="10" value="5" oninput="document.querySelector('#widthval').innerHTML = this.value"><span id="widthval">5</span></div>
 
-        <div class="wrapper"><label for="crosshairLength">Length</label>
-            <input type="range" id="crosshairLength" name="crosshairLength" min="1" max="50" value="25">
-        </div>
+  <div class="wrapper"><label for="crosshairLength">Length</label>
+    <input type="range" id="crosshairLength"  name="crosshairLength" min="1" max="50" value="25" oninput="document.querySelector('#lengthval').innerHTML = this.value"><span id="lengthval">25</span></div>
 
-        <div class="wrapper"><label for="gap">Gap</label>
-            <input type="range" id="gapLength" name="gapLength" min="0" max="50" value="15">
-        </div>
+  <div class="wrapper"><label for="gap">Gap</label>
+    <input type="range" id="gapLength" name="gapLength" min="0" max="50" value="15" oninput="document.querySelector('#gapval').innerHTML = this.value"><span id="gapval">15</span></div>
 
-        <div class="wrapper"><label for="outlineLength">Outline</label>
-            <input type="range" id="outlineLength" name="outlineLength" min="0" max="10" value="5">
-        </div>
+  <div class="wrapper"><label for="outlineLength">Outline</label>
+    <input type="range" id="outlineLength" name="outlineLength" min="0" max="10" value="5" oninput="document.querySelector('#outlineval').innerHTML = this.value"><span id="outlineval">5</span></div>
 
-        <div class="wrapper"><label for="rotate">Rotate</label>
-            <input type="range" id="rotate" name="rotate" min="0" max="45" value="0">
-        </div>
+  <div class="wrapper"><label for="rotate">Rotate</label>
+    <input type="range" id="rotate" name="rotate" min="0" max="45" value="0" oninput="document.querySelector('#rotateval').innerHTML = this.value"><span id="rotateval">0</span></div>
 
-        <div class="wrapper"><label for="dotradius">Dot Radius</label>
-            <input type="range" id="dotradius" name="dotradius" min="0" max="10" value="2">
-        </div>
+  <div class="wrapper"><label for="dotradius">Dot Radius</label>
+    <input type="range" id="dotradius" name="dotradius" min="0" max="10" value="2" oninput="document.querySelector('#radiusval').innerHTML = this.value"><span id="radiusval">2</span></div>
 
-        <div class="wrapper"><label for="fillcolorhex">Fill Color</label>
-            <input type="color" id="fillcolorhex" name="fillcolorhex" value="#ff0000">
-        </div>
+  <div class="wrapper"><label for="fillcolorhex">Fill Color</label>
+    <input type="color" id="fillcolorhex" name="fillcolorhex" value="#ff0000" oninput="document.querySelector('#fillval').innerHTML = this.value"><span id="fillval">#ff0000</span></div>
 
-        <div class="wrapper"><label for="outlinecolorhex">Outline Color</label>
-            <input type="color" id="outlinecolorhex" name="outlinecolorhex" value="#000000">
-        </div>
+  <div class="wrapper"><label for="outlinecolorhex">Outline Color</label>
+    <input type="color" id="outlinecolorhex" name="outlinecolorhex" value="#000000" oninput="document.querySelector('#outlinecolorval').innerHTML = this.value"><span id="outlinecolorval">#000000</span></div>
+  
+  <div class="wrapper"><button id="dark">Dark Mode</button><button id="light">Light Mode</button></div>
 
-        <div class="wrapper"><button id="downloadaspng" onclick="DownloadCanvasAsImage()">Download Crosshair</button>
-        </div>
-    </div>
+  <div class="wrapper"><button id="downloadaspng" onclick="DownloadCanvasAsImage()">Download Crosshair</button></div>
+</div>
 
     <script src="script.js"></script>
 </body>
