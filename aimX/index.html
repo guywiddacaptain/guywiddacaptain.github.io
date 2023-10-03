@@ -12,37 +12,297 @@
 </head>
 
 <body>
-    <div id="vcscrosshair-cont">
-  <canvas id="vcscanvas-crosshair-mini"></canvas>
-
-  <div class="wrapper"><label for="strokeWidth">Width</label>
-    <input type="range" id="strokeWidth" name="strokeWidth" min="1" max="10" value="5" oninput="document.querySelector('#widthval').innerHTML = this.value"><span id="widthval">5</span></div>
-
-  <div class="wrapper"><label for="crosshairLength">Length</label>
-    <input type="range" id="crosshairLength"  name="crosshairLength" min="1" max="50" value="25" oninput="document.querySelector('#lengthval').innerHTML = this.value"><span id="lengthval">25</span></div>
-
-  <div class="wrapper"><label for="gap">Gap</label>
-    <input type="range" id="gapLength" name="gapLength" min="0" max="50" value="15" oninput="document.querySelector('#gapval').innerHTML = this.value"><span id="gapval">15</span></div>
-
-  <div class="wrapper"><label for="outlineLength">Outline</label>
-    <input type="range" id="outlineLength" name="outlineLength" min="0" max="10" value="5" oninput="document.querySelector('#outlineval').innerHTML = this.value"><span id="outlineval">5</span></div>
-
-  <div class="wrapper"><label for="rotate">Rotate</label>
-    <input type="range" id="rotate" name="rotate" min="0" max="45" value="0" oninput="document.querySelector('#rotateval').innerHTML = this.value"><span id="rotateval">0</span></div>
-
-  <div class="wrapper"><label for="dotradius">Dot Radius</label>
-    <input type="range" id="dotradius" name="dotradius" min="0" max="10" value="2" oninput="document.querySelector('#radiusval').innerHTML = this.value"><span id="radiusval">2</span></div>
-
-  <div class="wrapper"><label for="fillcolorhex">Fill Color</label>
-    <input type="color" id="fillcolorhex" name="fillcolorhex" value="#ff0000" oninput="document.querySelector('#fillval').innerHTML = this.value"><span id="fillval">#ff0000</span></div>
-
-  <div class="wrapper"><label for="outlinecolorhex">Outline Color</label>
-    <input type="color" id="outlinecolorhex" name="outlinecolorhex" value="#000000" oninput="document.querySelector('#outlinecolorval').innerHTML = this.value"><span id="outlinecolorval">#000000</span></div>
-  
-  <div class="wrapper"><button id="dark">Dark Mode</button><button id="light">Light Mode</button></div>
-
-  <div class="wrapper"><button id="downloadaspng" onclick="DownloadCanvasAsImage()">Download Crosshair</button></div>
+    <div class="background">
+  <div class="horizontal">
+    <div class="line"><div class="prog" id="prog-horz1"></div></div>
+    <div class="line"><div class="prog" id="prog-horz2"></div></div>
+    <div class="line"><div class="prog" id="prog-horz3"></div></div>
+    <div class="line"><div class="prog" id="prog-horz4"></div></div>
+    <div class="line"><div class="prog" id="prog-horz5"></div></div>
+    <div class="line"><div class="prog" id="prog-horz6"></div></div> 
+    <div class="line"><div class="prog" id="prog-horz7"></div></div>
+    <div class="line"><div class="prog" id="prog-horz8"></div></div>
+    <div class="line"><div class="prog" id="prog-horz9"></div></div>
+    <div class="line"><div class="prog" id="prog-horz10"></div></div> 
+    <div class="line"><div class="prog" id="prog-horz11"></div></div> 
+    <div class="line"><div class="prog" id="prog-horz12"></div></div>
+    <div class="line"><div class="prog" id="prog-horz13"></div></div>
+    <div class="line"><div class="prog" id="prog-horz14"></div></div>
+    <div class="line"><div class="prog" id="prog-horz15"></div></div> 
+    <div class="line"><div class="prog" id="prog-horz16"></div></div> 
+  </div>
+  <div class="vertical">
+    <div class="line"><div class="prog" id="prog-vert1"></div></div>
+    <div class="line"><div class="prog" id="prog-vert2"></div></div>
+    <div class="line"><div class="prog" id="prog-vert3"></div></div>
+    <div class="line"><div class="prog" id="prog-vert4"></div></div>
+    <div class="line"><div class="prog" id="prog-vert5"></div></div>
+    <div class="line"><div class="prog" id="prog-vert6"></div></div>  
+    <div class="line"><div class="prog" id="prog-vert7"></div></div>
+    <div class="line"><div class="prog" id="prog-vert8"></div></div>
+    <div class="line"><div class="prog" id="prog-vert9"></div></div>
+    <div class="line"><div class="prog" id="prog-vert10"></div></div>  
+    <div class="line"><div class="prog" id="prog-vert11"></div></div> 
+    <div class="line"><div class="prog" id="prog-vert12"></div></div>
+    <div class="line"><div class="prog" id="prog-vert13"></div></div>
+    <div class="line"><div class="prog" id="prog-vert14"></div></div>
+    <div class="line"><div class="prog" id="prog-vert15"></div></div> 
+    <div class="line"><div class="prog" id="prog-vert16"></div></div> 
+  </div>
 </div>
+
+<div class="landing">
+
+  <header>
+    <button class="logo" onclick=" window.open('https://guywiddacaptain.github.io/aimX','_self')">
+      <p id="a"><svg width="60px" viewBox="0 0 581 549" version="1.1"><path fill-rule="evenodd" fill="#ffffff" stroke="none" d="M 220.637 2.778 C 220.272 3.368, 79.746 351.376, 54.683 413.756 L 50.161 425.013 123.702 424.756 L 197.243 424.500 218.625 367 C 244.694 296.895, 274.459 216.076, 283.555 190.697 C 287.261 180.355, 290.620 172.255, 291.018 172.697 C 291.416 173.139, 294.776 182.050, 298.485 192.500 C 313.674 235.295, 331.431 283.807, 360.529 362 C 403.267 476.850, 429 546.246, 429 546.654 C 429 546.844, 462.798 547, 504.107 547 C 565.511 547, 579.123 546.762, 578.713 545.694 C 578.437 544.975, 529.289 422.913, 469.495 274.444 C 409.701 125.975, 360.555 3.937, 360.282 3.250 C 359.892 2.267, 344.988 2, 290.452 2 C 252.318 2, 220.902 2.350, 220.637 2.778 M 24.031 489.750 C 12.806 517.663, 3.026 541.962, 2.298 543.750 L 0.973 547 76.340 547 L 151.708 547 170.331 496.677 C 180.574 468.999, 189.646 444.699, 190.491 442.677 L 192.027 439 118.234 439 L 44.441 439 24.031 489.750"/></svg></p>
+      <p id="imx">imX Crosshair Generator</p>
+    </button>
+
+    <div class="right-icons">
+      <button class="icon-btn" onclick="infomodalopen()"><p>About</p>
+        <svg width="27.5" viewBox="0 0 512 512">
+          <g id="drop" fill="white" transform="translate(42.666667, 42.666667)">
+            <path d="M213.333333,3.55271368e-14 C331.154987,3.55271368e-14 426.666667,95.51168 426.666667,213.333333 C426.666667,331.153707 331.154987,426.666667 213.333333,426.666667 C95.51296,426.666667 3.55271368e-14,331.153707 3.55271368e-14,213.333333 C3.55271368e-14,95.51168 95.51296,3.55271368e-14 213.333333,3.55271368e-14 Z M234.713387,192 L192.04672,192 L192.04672,320 L234.713387,320 L234.713387,192 Z M213.55008,101.333333 C197.99616,101.333333 186.713387,112.5536 186.713387,127.704107 C186.713387,143.46752 197.698773,154.666667 213.55008,154.666667 C228.785067,154.666667 240.04672,143.46752 240.04672,128 C240.04672,112.5536 228.785067,101.333333 213.55008,101.333333 Z" id="Shape"></path></g>
+        </svg></button>
+      <button class="icon-btn" onclick="ratingmodalopen()"><p>Rate</p>
+        <svg viewBox="0 0 576 512" width="24" title="star">
+          <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z" stroke="none" fill="white" fill-rule="evenodd"/>
+        </svg></button>
+      <button class="icon-btn" onclick="window.open('https://github.com/guywiddacaptain/guywiddacaptain.github.io/tree/main/aimX','_blank')"><p>Code</p>
+        <svg viewBox="0 0 640 512" width="25" title="code">
+          <path d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2l43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6l144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z" stroke="none" fill="white" fill-rule="evenodd"/>
+        </svg></button>
+    </div>
+
+  </header>
+
+  <section>
+
+    <div class="left-col">
+      <form class="controls">
+
+        <div class="wrapper">
+          <div class="title">Stroke Width</div>
+          <div class="inputs">
+            <input type="range" id="strokeWidth" name="strokeWidth" min="1" max="10" value="5" oninput="document.querySelector('#strokeWidthval').value = this.value">
+            <input type="number" id="strokeWidthval" min="1" max="10" value="5" oninput="document.querySelector('#strokeWidth').value = this.value">
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="title">Stroke Length</div>
+          <div class="inputs">
+            <input type="range" id="crosshairLength" name="crosshairLength" min="1" max="50" value="25" oninput="document.querySelector('#crosshairLengthval').value = this.value">
+            <input type="number" id="crosshairLengthval" min="1" max="50" value="25" oninput="document.querySelector('#crosshairLength').value = this.value">
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="title">Wing Gap</div>
+          <div class="inputs">
+            <input type="range" id="gapLength" name="gapLength" min="0" max="50" value="15" oninput="document.querySelector('#gapLengthval').value = this.value">
+            <input type="number" id="gapLengthval" min="0" max="50" value="15" oninput="document.querySelector('#gapLength').value = this.value">
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="title">Stroke Outline</div>
+          <div class="inputs">
+            <input type="range" id="outlineLength" name="outlineLength" min="0" max="10" value="5" oninput="document.querySelector('#outlineLengthval').value = this.value">
+            <input type="number" id="outlineLengthval" min="0" max="10" value="5" oninput="document.querySelector('#outlineLength').value = this.value">
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="title">Crosshair Rotation</div>
+          <div class="inputs">
+            <input type="range" id="rotate" name="rotate" min="0" max="45" value="0" oninput="document.querySelector('#rotateval').value = this.value">
+            <input type="number" id="rotateval" min="0" max="45" value="0" oninput="document.querySelector('#rotate').value = this.value">
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="title">Dot Radius</div>
+          <div class="inputs">
+            <input type="range" id="dotradius" name="dotradius" min="0" max="10" value="2" oninput="document.querySelector('#dotradiusval').value = this.value">
+            <input type="number" id="dotradiusval" min="0" max="10" value="2" oninput="document.querySelector('#dotradius').value = this.value">
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="title">Stroke Fill</div>
+          <div class="inputs">
+            <input type="color" id="fillcolorhex" name="fillcolorhex" value="#ff0000" oninput="document.querySelector('#fillcolorhexval').value = this.value">
+            <input type="text" id="fillcolorhexval" value="#ff0000" placeholder="#000000"  maxlength="7" oninput="document.querySelector('#fillcolorhex').value = this.value">
+          </div>
+        </div>
+
+        <div class="wrapper">
+          <div class="title">Outline Fill</div>
+          <div class="inputs">
+            <input type="color" id="outlinecolorhex" name="outlinecolorhex" value="#000000" oninput="document.querySelector('#outlinecolorhexval').value = this.value">
+            <input type="text" id="outlinecolorhexval" value="#000000" placeholder="#000000"  maxlength="7" oninput="document.querySelector('#outlinecolorhex').value = this.value">
+          </div>
+        </div>
+
+      </form>
+    </div>
+
+    <div class="right-col">
+      <div class="crosshair-cont">
+        <div class="canvas-cont">
+          <canvas id="canvas" width="200px" height="200px"></canvas>
+
+          <button id="theme-btn" class="theme-dark" onclick="themetoggle()">
+            <svg class="lightsvg" width="50px" height="50px" viewBox="0 0 24 24" fill="none">
+              <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="black"/></svg>
+            <svg class="darksvg" width="25px" height="25px" viewBox="0 0 24 24" fill="none" transform="matrix(-1, 0, 0, 1, 0, 0)"><path fill-rule="evenodd" clip-rule="evenodd" d="M8.23129 2.24048C9.24338 1.78695 10.1202 2.81145 9.80357 3.70098C8.72924 6.71928 9.38932 10.1474 11.6193 12.3765C13.8606 14.617 17.3114 15.2755 20.3395 14.1819C21.2206 13.8637 22.2173 14.7319 21.7817 15.7199C21.7688 15.7491 21.7558 15.7782 21.7427 15.8074C20.9674 17.5266 19.7272 19.1434 18.1227 20.2274C16.4125 21.3828 14.3957 22.0001 12.3316 22.0001H12.3306C9.93035 21.9975 7.6057 21.1603 5.75517 19.6321C3.90463 18.1039 2.64345 15.9797 2.18793 13.6237C1.73241 11.2677 2.11094 8.82672 3.2586 6.71917C4.34658 4.72121 6.17608 3.16858 8.20153 2.25386L8.23129 2.24048Z" fill="white"/></svg>
+          </button>
+        </div>
+
+        <button class="download-btn" id="downloadaspng" onclick="DownloadCanvasAsImage()"><svg width="30px" height="30px" viewBox="0 0 24 24" fill="none">
+          <path d="M14.2639 15.9375L12.5958 14.2834C11.7909 13.4851 11.3884 13.086 10.9266 12.9401C10.5204 12.8118 10.0838 12.8165 9.68048 12.9536C9.22188 13.1095 8.82814 13.5172 8.04068 14.3326L4.04409 18.2801M14.2639 15.9375L14.6053 15.599C15.4112 14.7998 15.8141 14.4002 16.2765 14.2543C16.6831 14.126 17.12 14.1311 17.5236 14.2687C17.9824 14.4251 18.3761 14.8339 19.1634 15.6514L20 16.4934M14.2639 15.9375L18.275 19.9565M18.275 19.9565C17.9176 20 17.4543 20 16.8 20H7.2C6.07989 20 5.51984 20 5.09202 19.782C4.71569 19.5903 4.40973 19.2843 4.21799 18.908C4.12796 18.7313 4.07512 18.5321 4.04409 18.2801M18.275 19.9565C18.5293 19.9256 18.7301 19.8727 18.908 19.782C19.2843 19.5903 19.5903 19.2843 19.782 18.908C20 18.4802 20 17.9201 20 16.8V16.4934M4.04409 18.2801C4 17.9221 4 17.4575 4 16.8V7.2C4 6.0799 4 5.51984 4.21799 5.09202C4.40973 4.71569 4.71569 4.40973 5.09202 4.21799C5.51984 4 6.07989 4 7.2 4H16.8C17.9201 4 18.4802 4 18.908 4.21799C19.2843 4.40973 19.5903 4.71569 19.782 5.09202C20 5.51984 20 6.0799 20 7.2V16.4934M17 8.99989C17 10.1045 16.1046 10.9999 15 10.9999C13.8954 10.9999 13 10.1045 13 8.99989C13 7.89532 13.8954 6.99989 15 6.99989C16.1046 6.99989 17 7.89532 17 8.99989Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>Download Crosshair</button>
+      </div>
+      <div class="preset-cont">
+        <button class="preset-btn" id="preset1" onclick="preset1(); redraw();">Preset 1</button>
+        <button class="preset-btn" id="preset2" onclick="preset2(); redraw();">Preset 2</button>
+        <button class="preset-btn" id="preset3" onclick="preset3(); redraw();">Preset 3</button>
+      </div>
+    </div>
+
+  </section>
+
+  <footer>AimX CG - Crosshair Generator by<button onclick="window.open('https://guywiddacaptain.github.io','_blank')">AimX</button></footer>
+
+</div>
+
+<dialog class="info-modal">
+  <div class="info-cont">
+    <div class="info-buttons">
+      <button class="info-btn active" id="info-about-btn" onclick="showabout()">About</button>
+      <button class="info-btn" id="info-changelog-btn" onclick="showchangelog()">Changelog</button>
+      <button class="info-btn" id="info-upnext-btn" onclick="showupnext()">Up-Next</button>
+      <button class="info-btn" id="info-contact-btn" onclick="showcontact()">Contact</button>
+    </div>
+    <div class="info-desc">
+
+      <div id="info-about">
+        The <strong>AimX Crosshair Generator</strong> is a browser-based crosshair generator that allows for the making of a variety of crosshairs without the hassle of using external tools like Photoshop or GIMP.
+        <br><br>
+        Use the inputs in combinations to create your own unique crosshairs, or check out the presets provided for some pre-made crosshairs!
+      </div>
+
+      <div id="info-changelog">
+        <h3>September 24, 2023</h3>
+        <ul>
+          <li>UI overhaul</li>
+          <li>Bug Fixes</li>
+        </ul>
+        <h3>September 2, 2023</h3>
+        <ul>
+          <li>Beta Release</li>
+        </ul>
+      </div>
+
+      <div id="info-upnext">
+        Here is some stuff you can expect to see in the future:
+        <ul>
+          <li>More crosshair shapes</li>
+          <li>Shape layering to create complex crosshairs/reticles</li>
+          <li>Import/Export crosshair settings</li>
+          <li>Dedicated preset generator</li>
+          <li>More crosshair presets from popular games/streamers</li>
+          <li>Cleaner and lighter code for better load times and performance</li>
+        </ul>
+      </div>
+
+      <div id="info-contact">
+        <div class="cards-cont">
+          <div class="card" id="guywiddasnipah">
+            <img src="https://avatars.githubusercontent.com/u/105264879" alt="profile.png">
+            <div class="profile">
+              <div class="name">Vance Y.</div>
+              <div class="username">@guywiddasnipah</div>
+              <div class="desc">UI Designer | Developer</div>
+            </div>
+            <div class="socials">
+              <button onclick=" window.open('https://discord.com/users/694164511011110972','_blank')"><svg width="35px" viewBox="0 0 24 24" fill="none">
+                <path d="M18.59 5.88997C17.36 5.31997 16.05 4.89997 14.67 4.65997C14.5 4.95997 14.3 5.36997 14.17 5.69997C12.71 5.47997 11.26 5.47997 9.83001 5.69997C9.69001 5.36997 9.49001 4.95997 9.32001 4.65997C7.94001 4.89997 6.63001 5.31997 5.40001 5.88997C2.92001 9.62997 2.25001 13.28 2.58001 16.87C4.23001 18.1 5.82001 18.84 7.39001 19.33C7.78001 18.8 8.12001 18.23 8.42001 17.64C7.85001 17.43 7.31001 17.16 6.80001 16.85C6.94001 16.75 7.07001 16.64 7.20001 16.54C10.33 18 13.72 18 16.81 16.54C16.94 16.65 17.07 16.75 17.21 16.85C16.7 17.16 16.15 17.42 15.59 17.64C15.89 18.23 16.23 18.8 16.62 19.33C18.19 18.84 19.79 18.1 21.43 16.87C21.82 12.7 20.76 9.08997 18.61 5.88997H18.59ZM8.84001 14.67C7.90001 14.67 7.13001 13.8 7.13001 12.73C7.13001 11.66 7.88001 10.79 8.84001 10.79C9.80001 10.79 10.56 11.66 10.55 12.73C10.55 13.79 9.80001 14.67 8.84001 14.67ZM15.15 14.67C14.21 14.67 13.44 13.8 13.44 12.73C13.44 11.66 14.19 10.79 15.15 10.79C16.11 10.79 16.87 11.66 16.86 12.73C16.86 13.79 16.11 14.67 15.15 14.67Z" fill="white"/>
+                </svg></button>
+              <button onclick=" window.open('https://github.com/guywiddasnipah','_blank')"><svg width="30px" viewBox="0 0 20 20">
+                <g transform="translate(-140.000000, -7559.000000)" fill="white">
+                  <g transform="translate(56.000000, 160.000000)">
+                    <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399">
+                    </path></g></g>
+                </svg></button>
+              <button onclick=" window.open('https://codepen.io/guywiddasnipah/','_blank')"><svg width="30px" viewBox="0 0 24 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.4265 1.18077C11.7709 0.939744 12.2291 0.939744 12.5735 1.18077L22.5735 8.18077C22.8408 8.3679 23 8.67369 23 9V16C23 16.3263 22.8408 16.6321 22.5735 16.8192L12.5735 23.8192C12.2291 24.0603 11.7709 24.0603 11.4265 23.8192L1.42654 16.8192C1.15921 16.6321 1 16.3263 1 16V9C1 8.67369 1.15921 8.3679 1.42654 8.18077L11.4265 1.18077ZM3 10.9207V14.0793L5.25621 12.5L3 10.9207ZM7 13.7207L3.74379 16L11 21.0793V16.5207L7 13.7207ZM13 16.5207V21.0793L20.2562 16L17 13.7207L13 16.5207ZM18.7438 12.5L21 14.0793V10.9207L18.7438 12.5ZM20.2562 9L17 11.2793L13 8.47934V3.92066L20.2562 9ZM11 3.92066V8.47934L7 11.2793L3.74379 9L11 3.92066ZM12 10.2207L8.74379 12.5L12 14.7793L15.2562 12.5L12 10.2207Z" fill="white"/>
+                </svg></button>
+            </div>
+          </div>
+
+          <div class="card" id="captaincool">
+            <img src="https://cdn.discordapp.com/attachments/938054512562827305/1158311741902569562/bgf8f8f8-flat750x075f-pad750x1000f8f8f8.jpg" alt="profile.jpg">
+            <div class="profile">
+              <div class="name">Captain Cool</div>
+              <div class="username">@capta1ncool</div>
+              <div class="desc">Developer</div>
+            </div>
+            <div class="socials">
+              <button onclick=" window.open('https://discord.com/users/852063993466978318','_blank')"><svg width="35px" viewBox="0 0 24 24" fill="none">
+                <path d="M18.59 5.88997C17.36 5.31997 16.05 4.89997 14.67 4.65997C14.5 4.95997 14.3 5.36997 14.17 5.69997C12.71 5.47997 11.26 5.47997 9.83001 5.69997C9.69001 5.36997 9.49001 4.95997 9.32001 4.65997C7.94001 4.89997 6.63001 5.31997 5.40001 5.88997C2.92001 9.62997 2.25001 13.28 2.58001 16.87C4.23001 18.1 5.82001 18.84 7.39001 19.33C7.78001 18.8 8.12001 18.23 8.42001 17.64C7.85001 17.43 7.31001 17.16 6.80001 16.85C6.94001 16.75 7.07001 16.64 7.20001 16.54C10.33 18 13.72 18 16.81 16.54C16.94 16.65 17.07 16.75 17.21 16.85C16.7 17.16 16.15 17.42 15.59 17.64C15.89 18.23 16.23 18.8 16.62 19.33C18.19 18.84 19.79 18.1 21.43 16.87C21.82 12.7 20.76 9.08997 18.61 5.88997H18.59ZM8.84001 14.67C7.90001 14.67 7.13001 13.8 7.13001 12.73C7.13001 11.66 7.88001 10.79 8.84001 10.79C9.80001 10.79 10.56 11.66 10.55 12.73C10.55 13.79 9.80001 14.67 8.84001 14.67ZM15.15 14.67C14.21 14.67 13.44 13.8 13.44 12.73C13.44 11.66 14.19 10.79 15.15 10.79C16.11 10.79 16.87 11.66 16.86 12.73C16.86 13.79 16.11 14.67 15.15 14.67Z" fill="white"/>
+                </svg></button>
+              <button onclick=" window.open('https://github.com/Capta1nCool','_blank')"><svg width="30px" viewBox="0 0 20 20">
+                <g transform="translate(-140.000000, -7559.000000)" fill="white">
+                  <g transform="translate(56.000000, 160.000000)">
+                    <path d="M94,7399 C99.523,7399 104,7403.59 104,7409.253 C104,7413.782 101.138,7417.624 97.167,7418.981 C96.66,7419.082 96.48,7418.762 96.48,7418.489 C96.48,7418.151 96.492,7417.047 96.492,7415.675 C96.492,7414.719 96.172,7414.095 95.813,7413.777 C98.04,7413.523 100.38,7412.656 100.38,7408.718 C100.38,7407.598 99.992,7406.684 99.35,7405.966 C99.454,7405.707 99.797,7404.664 99.252,7403.252 C99.252,7403.252 98.414,7402.977 96.505,7404.303 C95.706,7404.076 94.85,7403.962 94,7403.958 C93.15,7403.962 92.295,7404.076 91.497,7404.303 C89.586,7402.977 88.746,7403.252 88.746,7403.252 C88.203,7404.664 88.546,7405.707 88.649,7405.966 C88.01,7406.684 87.619,7407.598 87.619,7408.718 C87.619,7412.646 89.954,7413.526 92.175,7413.785 C91.889,7414.041 91.63,7414.493 91.54,7415.156 C90.97,7415.418 89.522,7415.871 88.63,7414.304 C88.63,7414.304 88.101,7413.319 87.097,7413.247 C87.097,7413.247 86.122,7413.234 87.029,7413.87 C87.029,7413.87 87.684,7414.185 88.139,7415.37 C88.139,7415.37 88.726,7417.2 91.508,7416.58 C91.513,7417.437 91.522,7418.245 91.522,7418.489 C91.522,7418.76 91.338,7419.077 90.839,7418.982 C86.865,7417.627 84,7413.783 84,7409.253 C84,7403.59 88.478,7399 94,7399">
+                    </path></g></g>
+                </svg></button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</dialog>
+
+<dialog class="rating-modal">
+  <div class="rating-cont">
+    <p class="title">Rate AimX CG</p>
+    <div class="stars-cont">
+      <input type="radio" name="star" id="star-1" oninput="rating()">
+      <label for="star-1" class="icon"><svg viewBox="0 0 576 512" width="50" title="star">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/>
+        </svg></label>
+
+      <input type="radio" name="star" id="star-2" oninput="rating()">
+      <label for="star-2" class="icon"><svg viewBox="0 0 576 512" width="50" title="star">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/>
+        </svg></label>
+
+      <input type="radio" name="star" id="star-3" oninput="rating()">
+      <label for="star-3" class="icon"><svg viewBox="0 0 576 512" width="50" title="star">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/>
+        </svg></label>
+
+      <input type="radio" name="star" id="star-4" oninput="rating()">
+      <label for="star-4" class="icon"><svg viewBox="0 0 576 512" width="50" title="star">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/>
+        </svg></label>
+
+      <input type="radio" name="star" id="star-5" oninput="rating()">
+      <label for="star-5" class="icon"><svg viewBox="0 0 576 512" width="50" title="star">
+        <path d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"/>
+        </svg></label>
+    </div>
+    <p id="thanks" style="display: none">Thanks For Your Feedback!</p>
+  </div>
+</dialog>
+
+<div class="loading-overlay"><p>INITIALIZING</p></div>
 
     <script src="script.js"></script>
 </body>
